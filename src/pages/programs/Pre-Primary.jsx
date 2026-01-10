@@ -1,6 +1,21 @@
 import { motion } from "framer-motion";
+import useSEO from "../../hooks/useSEO";
+import {
+    FaLanguage,
+    FaCalculator,
+    FaPaintBrush,
+    FaSmile,
+} from "react-icons/fa";
+
 
 export default function PrePrimary() {
+
+    useSEO({
+        title: "Pre-Primary School in Borkheda Kota | Euro Preschool",
+        description:
+            "Euro Preschool in Borkheda, Kota offers a nurturing Pre-Primary program focused on play-based learning, creativity and early development.",
+    });
+
     return (
         <>
             {/* ================= PAGE BANNER ================= */}
@@ -40,7 +55,7 @@ export default function PrePrimary() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        src="../images/aboutus2.jpg"
+                        src="../images/programs/preprimary.jpg"
                         alt="Pre Primary Classroom"
                         className="rounded-3xl shadow-xl w-full"
                     />
@@ -73,17 +88,43 @@ export default function PrePrimary() {
 
             {/* ================= LEARNING AREAS ================= */}
             <section className="py-20 bg-[#EFF2FB]">
-                <div className="max-w-7xl mx-auto px-6 text-center">
-                    <h2 className="text-3xl font-bold text-gray-800">
-                        Key <span className="text-[#3F4196]">Learning Areas</span>
-                    </h2>
+                <div className="max-w-7xl mx-auto px-6">
 
-                    <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                    {/* Heading */}
+                    <div className="text-center mb-14">
+                        <h2 className="text-3xl font-bold text-gray-800">
+                            Key <span className="text-[#3F4196]">Learning Areas</span>
+                        </h2>
+                        <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                            Our Pre-Primary curriculum focuses on essential skills that support
+                            early learning and overall child development.
+                        </p>
+                    </div>
+
+                    {/* Cards */}
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
                         {[
-                            "Language & Communication",
-                            "Early Numeracy Skills",
-                            "Creative Expression",
-                            "Social & Emotional Development",
+                            {
+                                title: "Language & Communication",
+                                icon: <FaLanguage />,
+                                desc: "Building vocabulary, listening skills and early reading through stories and interaction.",
+                            },
+                            {
+                                title: "Early Numeracy Skills",
+                                icon: <FaCalculator />,
+                                desc: "Developing number sense, patterns and basic problem-solving in a fun way.",
+                            },
+                            {
+                                title: "Creative Expression",
+                                icon: <FaPaintBrush />,
+                                desc: "Encouraging imagination through art, music, movement and creative activities.",
+                            },
+                            {
+                                title: "Social & Emotional Development",
+                                icon: <FaSmile />,
+                                desc: "Helping children build confidence, empathy and positive social behavior.",
+                            },
                         ].map((item, i) => (
                             <motion.div
                                 key={i}
@@ -91,16 +132,29 @@ export default function PrePrimary() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.4, delay: i * 0.1 }}
                                 viewport={{ once: true }}
-                                className="bg-white rounded-3xl p-8 shadow-md hover:shadow-lg transition"
+                                className="group bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition text-center"
                             >
+                                {/* Icon */}
+                                <div className="w-16 h-16 mx-auto mb-5 rounded-full bg-[#3F4196]/10 text-[#3F4196] flex items-center justify-center text-2xl group-hover:bg-[#3F4196] group-hover:text-white transition">
+                                    {item.icon}
+                                </div>
+
+                                {/* Title */}
                                 <h4 className="font-semibold text-gray-800 text-lg">
-                                    {item}
+                                    {item.title}
                                 </h4>
+
+                                {/* Description */}
+                                <p className="mt-3 text-sm text-gray-600 leading-relaxed">
+                                    {item.desc}
+                                </p>
                             </motion.div>
                         ))}
+
                     </div>
                 </div>
             </section>
+
 
             {/* ================= OUR APPROACH ================= */}
             <section className="py-20 bg-white">
@@ -136,7 +190,7 @@ export default function PrePrimary() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        src="../images/aboutus2.jpg"
+                        src="../images/programs/teaching.webp"
                         alt="Kids Learning Activities"
                         className="rounded-3xl shadow-xl w-full"
                     />

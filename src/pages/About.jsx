@@ -5,8 +5,15 @@ import {
     FaShieldAlt,
     FaBrain,
 } from "react-icons/fa";
+import useSEO from "../hooks/useSEO";
 
 export default function About() {
+    useSEO({
+  title: "About The Euro School International | Borkheda Kota",
+  description:
+    "Learn about The Euro School International in Borkheda, Kota – our vision, mission, teaching approach and commitment to nurturing confident and capable learners."
+});
+
     return (
         <>
             {/* ================= HERO / PAGE BANNER ================= */}

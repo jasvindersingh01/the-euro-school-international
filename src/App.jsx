@@ -10,6 +10,7 @@ import FlootingCallButton from "./components/FlootingCallButton";
 
 // Program Pages
 import PrePrimary from "./pages/programs/Pre-Primary";
+import Primary from "./pages/programs/Primary";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/programs/pre-primary" element={<PrePrimary />} />
+        <Route path="/programs/primary-school" element={<Primary />} />
       </Routes>
       <Footer />
     </BrowserRouter>

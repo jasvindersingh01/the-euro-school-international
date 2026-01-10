@@ -7,8 +7,16 @@ import {
   FaInstagram,
   FaYoutube,
 } from "react-icons/fa";
+import useSEO from "../hooks/useSEO";
 
 export default function Contact() {
+
+  useSEO({
+  title: "Contact The Euro School International | Borkheda Kota",
+  description:
+    "Contact The Euro School International in Borkheda, Kota for admissions, inquiries and school information. We are happy to assist parents and students."
+});
+
   return (
     <>
       {/* ================= CONTACT BANNER ================= */}

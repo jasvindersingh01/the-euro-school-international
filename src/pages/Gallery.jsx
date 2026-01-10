@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaTimes } from "react-icons/fa";
+import useSEO from "../hooks/useSEO";
 
 const images = [
   "images/gallery/g1.webp",
@@ -22,6 +23,12 @@ const images = [
 
 export default function GallerySection() {
   const [active, setActive] = useState(null);
+
+  useSEO({
+  title: "School Gallery | The Euro School International Borkheda Kota",
+  description:
+    "Explore our school gallery showcasing classrooms, activities, events and campus life at The Euro School International in Borkheda, Kota."
+});
 
   return (
     <>
