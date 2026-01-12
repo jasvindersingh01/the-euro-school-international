@@ -17,6 +17,7 @@ export default function Navbar() {
         { name: "Home", to: "/" },
         { name: "About", to: "/about" },
         { name: "Programs", to: "/programs" },
+        { name: "Academics", to: "/academics" },
         { name: "Gallery", to: "/gallery" },
         { name: "Contact", to: "/contact" },
     ];
@@ -26,8 +27,6 @@ export default function Navbar() {
         { name: "Primary School", to: "/programs/primary-school" },
         { name: "Middle School", to: "/programs/middle-school" },
         { name: "Upper School", to: "/programs/upper-school" },
-        { name: "Academic Excellence", to: "/programs/acadamic-excellence" },
-        { name: "Co-Curricular Activities", to: "/programs/co-curricular-activities" },
     ];
 
     useEffect(() => {

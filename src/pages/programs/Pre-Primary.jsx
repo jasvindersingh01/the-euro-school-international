@@ -6,6 +6,7 @@ import {
     FaPaintBrush,
     FaSmile,
 } from "react-icons/fa";
+import Breadcrumb from "../../components/Breadcrumb";
 
 
 export default function PrePrimary() {
@@ -41,6 +42,11 @@ export default function PrePrimary() {
                         <p className="mt-4 text-lg text-blue-100 max-w-2xl">
                             A joyful and nurturing beginning to your child’s learning journey.
                         </p>
+                        <Breadcrumb
+                            parent="Programs"
+                            parentLink="/programs"
+                            page="Pre-Primary"
+                        />
                     </motion.div>
                 </div>
             </section>
@@ -135,7 +141,7 @@ export default function PrePrimary() {
                                 className="group bg-white rounded-3xl p-8 shadow-md hover:shadow-xl transition text-center"
                             >
                                 {/* Icon */}
-                                <div className="w-16 h-16 mx-auto mb-5 rounded-full bg-[#3F4196]/10 text-[#3F4196] flex items-center justify-center text-2xl group-hover:bg-[#3F4196] group-hover:text-white transition">
+                                <div className="w-16 h-16 mx-auto mb-5 rounded-full bg-yellow-300 text-[#3F4196] flex items-center justify-center text-2xl group-hover:bg-[#3F4196] group-hover:text-yellow-300 transition">
                                     {item.icon}
                                 </div>
 

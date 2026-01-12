@@ -1,23 +1,23 @@
 import { motion } from "framer-motion";
 import {
-    FaBookReader,
-    FaCalculator,
-    FaComments,
-    FaUserGraduate,
+    FaBrain,
+    FaChartLine,
+    FaUsers,
+    FaChalkboardTeacher,
 } from "react-icons/fa";
 import useSEO from "../../hooks/useSEO";
 import Breadcrumb from "../../components/Breadcrumb";
 
-export default function Primary() {
+export default function UpperPrimary() {
     useSEO({
-        title: "Primary School (Grade 1–2) in Borkheda Kota | The Euro School",
+        title: "Middle School (Grade 6–8) in Borkheda Kota | The Euro School",
         description:
-            "The Primary School program (Grade 1–2) at The Euro School International, Borkheda Kota focuses on building strong foundations in literacy, numeracy and confidence.",
+            "The Middle School program (Grade 6–8) at The Euro School International, Borkheda Kota prepares students academically and emotionally for higher classes and future success.",
     });
 
     return (
         <>
-            {/* ================= PAGE BANNER ================= */}
+            {/* ================= HERO ================= */}
             <section className="relative h-[300px] md:h-[360px] overflow-hidden">
                 <div
                     className="absolute inset-0 bg-cover bg-center"
@@ -34,112 +34,96 @@ export default function Primary() {
                         viewport={{ once: true }}
                     >
                         <h1 className="text-4xl md:text-5xl font-bold text-white">
-                            Primary School <span className="text-yellow-300">(Grade 1 – 2)</span>
+                            Upper School <span className="text-yellow-300">(Grade 6 - 8)</span>
                         </h1>
                         <p className="mt-4 text-lg text-blue-100 max-w-2xl mx-auto">
-                            Building strong basics in literacy, numeracy and confidence.
+                            Preparing students academically and emotionally for higher classes.
                         </p>
                         <Breadcrumb
                             parent="Programs"
                             parentLink="/programs"
-                            page="Primary-School"
+                            page="Upper-School"
                         />
                     </motion.div>
                 </div>
             </section>
 
-            {/* ================= INTRO SECTION ================= */}
+            {/* ================= INTRO + STATS ================= */}
             <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
-                    {/* LEFT - IMAGE */}
+                    {/* Left Text */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -40 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="text-3xl font-bold text-gray-800">
+                            Upper <span className="text-[#3F4196]">Primary Education</span>
+                        </h2>
+
+                        <p className="mt-5 text-gray-600 leading-relaxed">
+                            Our Upper Primary program for Grades 6 to 8 is designed to help
+                            students grow academically while also supporting their emotional
+                            and social development during this crucial stage.
+                        </p>
+
+                        <p className="mt-4 text-gray-600 leading-relaxed">
+                            Students are guided to think critically, manage responsibilities
+                            and develop the confidence required to face higher academic
+                            challenges.
+                        </p>
+                    </motion.div>
+
+                    {/* Right Stats */}
                     <motion.img
                         initial={{ opacity: 0, x: -40 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        src="../images/programs/grade1.webp"
+                        src="../images/programs/grade6.jpeg"
                         alt="Primary Classroom"
                         className="rounded-lg shadow-xl w-full"
                     />
-
-                    {/* RIGHT - CONTENT */}
-                    <div>
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5 }}
-                            viewport={{ once: true }}
-                            className="text-3xl font-bold text-gray-800"
-                        >
-                            Early <span className="text-[#3F4196]">Primary Education</span>
-                        </motion.h2>
-
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.1 }}
-                            viewport={{ once: true }}
-                            className="mt-6 text-gray-600 leading-relaxed"
-                        >
-                            Our Primary School program for Grade 1 and 2 focuses on strengthening
-                            core academic skills while nurturing confidence, curiosity and a
-                            positive attitude towards learning.
-                        </motion.p>
-
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
-                            viewport={{ once: true }}
-                            className="mt-4 text-gray-600 leading-relaxed"
-                        >
-                            Students are encouraged to think independently, communicate clearly
-                            and develop a strong foundation that prepares them for higher grades.
-                        </motion.p>
-                    </div>
-
                 </div>
-
             </section>
 
-            {/* ================= KEY LEARNING AREAS ================= */}
+            {/* ================= FOCUS AREAS ================= */}
             <section className="py-20 bg-[#EFF2FB]">
                 <div className="max-w-7xl mx-auto px-6">
 
-                    {/* Heading */}
                     <div className="text-center mb-14">
                         <h2 className="text-3xl font-bold text-gray-800">
-                            Key <span className="text-[#3F4196]">Learning Areas</span>
+                            Key <span className="text-[#3F4196]">Focus Areas</span>
                         </h2>
                         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
-                            Our Primary curriculum focuses on essential academic and personal
-                            skills required during the early school years.
+                            We prepare students to handle both academic pressure and personal
+                            growth with confidence.
                         </p>
                     </div>
 
-                    {/* Cards */}
                     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
                         {[
                             {
-                                title: "Literacy Development",
-                                icon: <FaBookReader />,
-                                desc: "Strengthening reading, writing, vocabulary and comprehension skills.",
+                                title: "Critical Thinking",
+                                icon: <FaBrain />,
+                                desc: "Encouraging logical reasoning, analysis and independent thinking.",
                             },
                             {
-                                title: "Numeracy Skills",
-                                icon: <FaCalculator />,
-                                desc: "Building a strong understanding of numbers, operations and logical thinking.",
+                                title: "Academic Excellence",
+                                icon: <FaChartLine />,
+                                desc: "Strengthening subject knowledge and performance across subjects.",
                             },
                             {
-                                title: "Communication Skills",
-                                icon: <FaComments />,
-                                desc: "Encouraging clear expression, listening skills and classroom participation.",
+                                title: "Teamwork & Leadership",
+                                icon: <FaUsers />,
+                                desc: "Developing collaboration, leadership and communication skills.",
                             },
                             {
-                                title: "Confidence & Independence",
-                                icon: <FaUserGraduate />,
-                                desc: "Helping students become confident, responsible and self-motivated learners.",
+                                title: "Teacher Mentorship",
+                                icon: <FaChalkboardTeacher />,
+                                desc: "Providing guidance, motivation and academic support to every student.",
                             },
                         ].map((item, i) => (
                             <motion.div
@@ -167,14 +151,14 @@ export default function Primary() {
                 </div>
             </section>
 
-            {/* ================= QUOTE STRIP ================= */}
+            {/* ================= QUOTE ================= */}
             <section className="py-16 bg-[#3F4196] text-center text-white relative overflow-hidden">
                 <div className="absolute -top-16 -left-16 w-64 h-64 bg-white/10 rounded-full" />
                 <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-white/10 rounded-full" />
 
                 <p className="relative z-10 text-xl md:text-2xl font-medium max-w-3xl mx-auto px-6">
-                    “Strong foundations in the early years lead to confident and capable
-                    learners in the future.”
+                    “Middle school is where students discover their strengths and prepare
+                    for their future.”
                 </p>
             </section>
         </>

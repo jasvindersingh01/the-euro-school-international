@@ -8,14 +8,15 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import useSEO from "../hooks/useSEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 export default function Contact() {
 
   useSEO({
-  title: "Contact The Euro School International | Borkheda Kota",
-  description:
-    "Contact The Euro School International in Borkheda, Kota for admissions, inquiries and school information. We are happy to assist parents and students."
-});
+    title: "Contact The Euro School International | Borkheda Kota",
+    description:
+      "Contact The Euro School International in Borkheda, Kota for admissions, inquiries and school information. We are happy to assist parents and students."
+  });
 
   return (
     <>
@@ -43,6 +44,10 @@ export default function Contact() {
               We are always happy to connect with parents and guide you on your
               child’s educational journey.
             </p>
+            <Breadcrumb
+              parent="Contact"
+              parentLink="/contact"
+            />
           </motion.div>
         </div>
       </section>

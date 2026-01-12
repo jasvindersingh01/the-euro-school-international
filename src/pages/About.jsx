@@ -6,13 +6,14 @@ import {
     FaBrain,
 } from "react-icons/fa";
 import useSEO from "../hooks/useSEO";
+import Breadcrumb from "../components/Breadcrumb";
 
 export default function About() {
     useSEO({
-  title: "About The Euro School International | Borkheda Kota",
-  description:
-    "Learn about The Euro School International in Borkheda, Kota – our vision, mission, teaching approach and commitment to nurturing confident and capable learners."
-});
+        title: "About The Euro School International | Borkheda Kota",
+        description:
+            "Learn about The Euro School International in Borkheda, Kota – our vision, mission, teaching approach and commitment to nurturing confident and capable learners."
+    });
 
     return (
         <>
@@ -39,6 +40,10 @@ export default function About() {
                             A trusted institution committed to academic excellence, values and
                             holistic development from early years to middle school.
                         </p>
+                        <Breadcrumb
+                            parent="About"
+                            parentLink="/about"
+                        />
                     </div>
                 </div>
             </section>

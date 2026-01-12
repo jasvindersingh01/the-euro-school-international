@@ -6,6 +6,7 @@ import {
   FaPhoneAlt,
   FaMapMarkerAlt,
   FaEnvelope,
+  FaChevronRight,
 } from "react-icons/fa";
 
 export default function Footer() {
@@ -35,11 +36,25 @@ export default function Footer() {
             Quick Links
           </h4>
           <ul className="space-y-3 text-blue-100">
-            <li><Link to="/" className="hover:text-white">Home</Link></li>
-            <li><Link to="/about" className="hover:text-white">About Us</Link></li>
-            <li><Link to="/gallery" className="hover:text-white">Gallery</Link></li>
-            <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+            {[
+              { name: "Home", to: "/" },
+              { name: "About Us", to: "/about" },
+              { name: "Academics", to: "/academics" },
+              { name: "Gallery", to: "/gallery" },
+              { name: "Contact", to: "/contact" },
+            ].map((link, i) => (
+              <li key={i}>
+                <Link
+                  to={link.to}
+                  className="flex items-center gap-2 hover:text-white transition group"
+                >
+                  <FaChevronRight className="text-yellow-300 text-xs group-hover:translate-x-1 transition" />
+                  {link.name}
+                </Link>
+              </li>
+            ))}
           </ul>
+
         </div>
 
         {/* Programs */}
@@ -48,12 +63,25 @@ export default function Footer() {
             Our Programs
           </h4>
           <ul className="space-y-3 text-blue-100">
-            <li>Pre-Primary</li>
-            <li>Primary School</li>
-            <li>Middle School (Up to Class 8)</li>
-            <li>Academic Excellence</li>
-            <li>Co-curricular Activities</li>
+            {[
+              { name: "Pre-Primary", to: "/programs/pre-primary" },
+              { name: "Primary School", to: "/programs/primary-school" },
+              { name: "Middle School", to: "/programs/middle-school" },
+              { name: "Upper School", to: "/programs/upper-school" },
+            ].map((item, i) => (
+              <li key={i}>
+                <Link
+                  to={item.to}
+                  className="flex items-center gap-2 hover:text-white transition group"
+                >
+                  <FaChevronRight className="text-yellow-300 text-xs group-hover:translate-x-1 transition" />
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
+
+
         </div>
 
         {/* Contact Info */}
@@ -88,13 +116,13 @@ export default function Footer() {
 
           {/* Social Icons */}
           <div className="flex gap-4 mt-6">
-            <a href="https://www.facebook.com/THEEUROSCHOOL/" target="_blank" className="bg-white/10 p-3 rounded-full hover:bg-yellow-300 hover:text-[#3F4196] transition">
+            <a href="https://www.facebook.com/THEEUROSCHOOL/" target="_blank" className="bg-white/10 p-3 rounded-full hover:bg-yellow-300 transition">
               <FaFacebookF />
             </a>
-            <a href="https://www.instagram.com/eurokids_baran_road_kota?igsh=M2xhbWR2cXdoOWg2" target="_blank" className="bg-white/10 p-3 rounded-full hover:bg-yellow-300 hover:text-[#3F4196] transition">
+            <a href="https://www.instagram.com/eurokids_baran_road_kota?igsh=M2xhbWR2cXdoOWg2" target="_blank" className="bg-white/10 p-3 rounded-full hover:bg-yellow-300 transition">
               <FaInstagram />
             </a>
-            <a href="https://www.youtube.com/@eurokidsbaranroadkota" target="_blank" className="bg-white/10 p-3 rounded-full hover:bg-yellow-300 hover:text-[#3F4196] transition">
+            <a href="https://www.youtube.com/@eurokidsbaranroadkota" target="_blank" className="bg-white/10 p-3 rounded-full hover:bg-yellow-300 transition">
               <FaYoutube />
             </a>
           </div>
