@@ -3,7 +3,7 @@ import { FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="bg-[#F3E8FF] py-24 overflow-hidden">
+    <section className="bg-[#F3E8FF] py-14 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
         {/* TEXT */}
