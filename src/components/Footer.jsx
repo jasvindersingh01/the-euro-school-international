@@ -65,9 +65,9 @@ export default function Footer() {
           <ul className="space-y-3 text-blue-100">
             {[
               { name: "Pre-Primary", to: "/programs/pre-primary" },
-              { name: "Primary School", to: "/programs/primary-school" },
-              { name: "Middle School", to: "/programs/middle-school" },
-              { name: "Upper School", to: "/programs/upper-school" },
+              { name: "Primary Grade (1 - 2)", to: "/programs/primary-1-2" },
+              { name: "Primary Grade (3 - 5)", to: "/programs/primary-3-5" },
+              { name: "Middle School (Grade 6 - 8)", to: "/programs/middle-school" },
             ].map((item, i) => (
               <li key={i}>
                 <Link

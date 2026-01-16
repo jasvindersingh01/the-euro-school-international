@@ -3,7 +3,7 @@ import { FaHome, FaChevronRight } from "react-icons/fa";
 
 export default function Breadcrumb({ page, parent, parentLink }) {
   return (
-    <div className="inline-flex items-center space-x-3 px-5 py-3 text-sm mt-3">
+    <div className="inline-flex items-center space-x-3 py-3 text-sm mt-3">
 
       {/* Home */}
       <Link
@@ -16,7 +16,6 @@ export default function Breadcrumb({ page, parent, parentLink }) {
 
       <FaChevronRight className="text-gray-300 text-xs" />
 
-      {/* Parent (Programs / About etc) */}
       {parent && (
         <>
           <Link

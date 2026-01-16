@@ -11,9 +11,9 @@ import FlootingCallButton from "./components/FlootingCallButton";
 
 // Program Pages
 import PrePrimary from "./pages/programs/Pre-Primary";
-import Primary from "./pages/programs/Primary";
-import MiddleSchool from "./pages/programs/MiddleSchool";
-import UpperPrimary from "./pages/programs/UpperSchool";
+import Primary from "./pages/programs/Primary12";
+import MiddleSchool from "./pages/programs/Primary35";
+import UpperPrimary from "./pages/programs/MiddleSchool";
 
 export default function App() {
   return (
@@ -28,17 +28,10 @@ export default function App() {
         <Route path="/gallery" element={<GallerySection />} />
         <Route path="/contact" element={<Contact />} />
 
-    {/* { name: "Pre-Primary", to: "/programs/pre-primary" },
-        { name: "Primary School", to: "/programs/primary-school" },
-        { name: "Middle School", to: "/programs/middle-school" },
-        { name: "Upper School", to: "/programs/upper-school" },
-        { name: "Academic Excellence", to: "/programs/acadamic-excellence" },
-        { name: "Co-Curricular Activities", to: "/programs/co-curricular-activities" }, */}
-
         <Route path="/programs/pre-primary" element={<PrePrimary />} />
-        <Route path="/programs/primary-school" element={<Primary />} />
-        <Route path="/programs/middle-school" element={<MiddleSchool />} />
-        <Route path="/programs/upper-school" element={<UpperPrimary />} />
+        <Route path="/programs/primary-1-2" element={<Primary />} />
+        <Route path="/programs/primary-3-5" element={<MiddleSchool />} />
+        <Route path="/programs/middle-school" element={<UpperPrimary />} />
       </Routes>
       <Footer />
     </BrowserRouter>

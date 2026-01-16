@@ -11,6 +11,7 @@ import logo from "/logo.png";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
+    const [openPrograms, setOpenPrograms] = useState(false);
     const menuRef = useRef(null);
 
     const links = [
@@ -24,9 +25,10 @@ export default function Navbar() {
 
     const programLinks = [
         { name: "Pre-Primary", to: "/programs/pre-primary" },
-        { name: "Primary School", to: "/programs/primary-school" },
-        { name: "Middle School", to: "/programs/middle-school" },
-        { name: "Upper School", to: "/programs/upper-school" },
+        { name: "Primary (Grade 1–2)", to: "/programs/primary-1-2" },
+        { name: "Primary (Grade 3–5)", to: "/programs/primary-3-5" },
+        { name: "Middle School (Grade 6–8)", to: "/programs/middle-school" },
+
     ];
 
     useEffect(() => {
@@ -133,36 +135,71 @@ export default function Navbar() {
             </div >
 
             {/* MOBILE MENU */}
-            < div
+            {/* MOBILE MENU */}
+            <div
                 ref={menuRef}
                 className={`md:hidden bg-[#3F4196] text-white px-6
-    text-lg font-medium space-y-5
-    transition-all duration-300 ease-in-out overflow-hidden
-    ${open ? "max-h-[500px] opacity-100 py-6" : "max-h-0 opacity-0 py-0"}
-  `}
+  text-lg font-medium space-y-5
+  transition-all duration-300 ease-in-out overflow-hidden
+  ${open ? "max-h-[600px] opacity-100 py-6" : "max-h-0 opacity-0 py-0"}
+`}
             >
                 <Link onClick={() => setOpen(false)} to="/" className="block hover:text-yellow-300">
                     Home
                 </Link>
+
                 <Link onClick={() => setOpen(false)} to="/about" className="block hover:text-yellow-300">
                     About
                 </Link>
-                <Link onClick={() => setOpen(false)} to="/programs" className="block hover:text-yellow-300">
-                    Programs
-                </Link>
+
+                {/* 🔽 PROGRAMS DROPDOWN (MOBILE) */}
+                <div>
+                    <button
+                        onClick={() => setOpenPrograms(!openPrograms)}
+                        className="flex items-center justify-between w-full hover:text-yellow-300"
+                    >
+                        Programs
+                        <FaChevronDown
+                            className={`transition-transform duration-300 ${openPrograms ? "rotate-180" : ""
+                                }`}
+                        />
+                    </button>
+
+                    {openPrograms && (
+                        <div className="ml-4 mt-3 space-y-3 text-sm text-gray-200">
+                            {programLinks.map((program) => (
+                                <Link
+                                    key={program.name}
+                                    to={program.to}
+                                    onClick={() => {
+                                        setOpen(false);
+                                        setOpenPrograms(false);
+                                    }}
+                                    className="block hover:text-yellow-300"
+                                >
+                                    {program.name}
+                                </Link>
+                            ))}
+                        </div>
+                    )}
+                </div>
+
                 <Link onClick={() => setOpen(false)} to="/gallery" className="block hover:text-yellow-300">
                     Gallery
                 </Link>
+
                 <Link onClick={() => setOpen(false)} to="/contact" className="block hover:text-yellow-300">
                     Contact
                 </Link>
 
+                {/* SOCIAL ICONS */}
                 <div className="flex gap-6 pt-4 text-2xl">
                     <FaFacebookF />
                     <FaInstagram />
                     <FaYoutube />
                 </div>
-            </div >
+            </div>
+
         </header >
     );
 }

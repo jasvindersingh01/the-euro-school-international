@@ -45,14 +45,14 @@ export default function Gallery() {
               />
             </motion.div>
           ))}
-          <div className="mt-10 mx-auto col-span-full w-48">
+          <div className="mt-10 mx-auto col-span-full w-50">
             <Link to="/gallery" className="inline block bg-[#3F4196] text-white text-center font-semibold py-3 px-6 rounded-full hover:bg-[#35378C] transition w-full">
               View All Gallery →
             </Link>
           </div>
         </div>
       </div>
-
+npm 
      {/* Popup / Lightbox */}
 {selected && (
   <div

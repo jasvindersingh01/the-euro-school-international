@@ -7,36 +7,28 @@ const programs = [
     age: "Early Childhood",
     desc: "A joyful foundation program focused on play, creativity and early learning.",
     image: "images/programs/pre.jpg",
+    link: "/programs/pre-primary",
   },
   {
     title: "Primary (Grade 1 – 2)",
     age: "Early Primary",
     desc: "Building strong basics in literacy, numeracy and confidence.",
     image: "images/programs/primary.jpg",
+    link: "/programs/primary-1-2",
   },
   {
     title: "Primary (Grade 3 – 5)",
     age: "Middle Primary",
     desc: "Encouraging independent thinking, problem solving and curiosity.",
     image: "images/programs/mid.webp",
+    link: "/programs/primary-3-5",
   },
   {
     title: "Middle School (Grade 6 – 8)",
     age: "Upper Primary",
     desc: "Preparing students academically and emotionally for higher classes.",
     image: "images/programs/six-eight.jfif",
-  },
-  {
-    title: "Academics & Curriculum",
-    age: "CBSE / ICSE Aligned",
-    desc: "Structured curriculum designed to support conceptual understanding.",
-    image: "images/programs/curriculam.webp",
-  },
-  {
-    title: "Activities & Skill Development",
-    age: "Overall Growth",
-    desc: "Sports, arts, music and life skills for holistic development.",
-    image: "images/programs/overall.jpg",
+    link: "/programs/middle-school",
   },
 ];
 
@@ -57,7 +49,7 @@ export default function Programs() {
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-1 lg:grid-cols-4 gap-8">
           {programs.map((item, index) => (
             <motion.div
               key={index}
@@ -91,7 +83,7 @@ export default function Programs() {
                   </p>
 
                   <Link
-                    to="/programs"
+                    to={item.link}
                     className="inline-block mt-4 text-[#3F4196] font-semibold hover:underline"
                   >
                     Learn More →
