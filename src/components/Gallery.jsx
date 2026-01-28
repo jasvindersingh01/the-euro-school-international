@@ -52,7 +52,6 @@ export default function Gallery() {
           </div>
         </div>
       </div>
-npm 
      {/* Popup / Lightbox */}
 {selected && (
   <div

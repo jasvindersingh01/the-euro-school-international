@@ -4,7 +4,7 @@ import Faq from "../components/FAQ";
 import Hero from "../components/Hero";
 import Programs from "../components/Programs";
 import WhyChooseUs from "../components/WhyChooseUs";
-import Gallery from "../components/gallery";
+import Gallery from "../components/Gallery";
 import Testimonials from "../components/Testimonials";
 import useSEO from "../hooks/useSEO";
 
