@@ -17,7 +17,6 @@ export default function Home() {
 
   return (
     <>
-    <div className="overflow-x-hidden">
       <Hero />
         <AboutSection />
         <Programs />
@@ -26,7 +25,6 @@ export default function Home() {
         <Testimonials />
         <Faq />
         <ContactPreview />
-        </div>
     </>
   );
 }
